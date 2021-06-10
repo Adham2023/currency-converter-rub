@@ -5,9 +5,13 @@
       </span>
       <div class="pair-indicator">
           <div class="pair">
-              {{currency.CharCode}}
+              <span v-if="!invert">1 {{currency.CharCode}}</span>
+              <span v-else><span style="font-weight: bold">{{ currentCurrency() }}</span>
+                            {{currency.CharCode}}
+              </span>
               <span v-if="!invert" style="color: gray">&#10231; </span>
-              <span  style="font-weight: bold">{{ currentCurrency() }}</span>
+              <span v-if="!invert" style="font-weight: bold">{{ currentCurrency() }}</span>
+              <span v-else>1 </span>
               <span v-if="invert" style="color: gray">&#10231; </span>
               RUB
           </div>
