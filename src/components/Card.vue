@@ -11,8 +11,8 @@
               </span>
               <span v-if="!invert" style="color: gray">&#10231; </span>
               <span v-if="!invert" style="font-weight: bold">{{ currentCurrency() }}</span>
-              <span v-else>1 </span>
               <span v-if="invert" style="color: gray">&#10231; </span>
+              <span v-if="invert">1 </span>
               RUB
           </div>
           <span class="indicator">
